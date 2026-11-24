@@ -1,0 +1,29 @@
+GLAUCO GUEDES — SITE & APP INSTALÁVEL (PWA) + FLIPERAMA RETRÔ (4 JOGOS)
+========================================================================
+
+Arquivos incluídos neste pacote:
+- index.html               -> Página principal (Site + PWA + Interactive Lab)
+- manifest.json            -> Configuração do App Instalável (nome, tema, ícones, atalhos)
+- sw.js                    -> Service Worker para funcionamento offline e cache rápido
+- arcade-game.js           -> Módulo leve com 4 joguinhos de fliperama retrô (Canvas 60 FPS)
+- icon.svg                 -> Ícone vetorial principal (<G/>)
+- icon-192.png             -> Ícone do App (192x192)
+- icon-512.png             -> Ícone do App em alta resolução (512x512)
+- icon-maskable-512.png    -> Ícone adaptável para Android (maskable 512x512)
+- apple-touch-icon.png     -> Ícone para iPhone / iPad (180x180)
+- favicon-32x32.png        -> Ícone de aba do navegador (32x32)
+- favicon.ico              -> Favicon clássico multi-resolução (16x16, 32x32, 48x48)
+
+Os 4 joguinhos incluídos (botão flutuante "Mini Arcade" ou na seção Interactive Lab):
+1. Packet Invaders  -> Estilo Space Invaders: defenda o servidor contra ondas de bugs.
+2. Cyber Snake      -> Estilo Snake clássico: colete pacotes de energia neon.
+3. Firewall Breakout-> Estilo Arkanoid/Breakout: quebre as camadas de firewall com a esfera.
+4. Cyber Runner     -> Estilo Dino Runner: salte sobre obstáculos e pacotes corrompidos.
+
+Como publicar (para funcionar como Site e App Instalável):
+1. Envie todos os arquivos desta pasta para um repositório no GitHub (ex.: guedes16-prog.github.io)
+   ou arraste a pasta no Netlify Drop / Vercel.
+2. Acesse o link HTTPS gerado:
+   - No computador (Chrome/Edge): clique em "Instalar App" no topo do site ou no ícone de instalação na barra de endereço.
+   - No Android (Chrome): clique em "Instalar App" ou menu (⋮) -> "Instalar aplicativo".
+   - No iPhone/iPad (Safari): toque em Compartilhar -> "Adicionar à Tela de Início".

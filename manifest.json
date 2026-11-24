@@ -1,0 +1,72 @@
+{
+  "name": "Glauco Guedes — Software Developer & IT Infrastructure",
+  "short_name": "Glauco Guedes",
+  "description": "Portfólio profissional de Glauco Guedes — Software Developer, IT Infrastructure, Networking & Mini Arcade.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "lang": "pt-BR",
+  "categories": [
+    "portfolio",
+    "technology",
+    "developer",
+    "games"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Interactive Lab & Arcade",
+      "short_name": "Lab & Arcade",
+      "description": "Desafios técnicos e 4 joguinhos de fliperama leves",
+      "url": "./index.html#lab",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Projetos",
+      "short_name": "Projetos",
+      "description": "Projetos em Python, Machine Learning e TI",
+      "url": "./index.html#projects",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

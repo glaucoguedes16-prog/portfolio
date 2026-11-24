@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#070b14" />
+  <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Glauco Guedes" />
   <meta name="description" content="Portfólio profissional de Glauco Guedes — Software Developer, IT Infrastructure, Networking & Technology." />
   <title>Glauco Guedes — Software Developer | IT Infrastructure | Technology</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1558,6 +1567,131 @@
       opacity: 1;
       transform: translateY(0);
     }
+  
+    /* PWA Install Button & Arcade Lab Card */
+    .pwa-install-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 211, 238, 0.45);
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(59, 130, 246, 0.18));
+      color: #e0f2fe;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .pwa-install-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 6px 18px rgba(34, 211, 238, 0.22);
+    }
+    @media all and (display-mode: standalone) {
+      .pwa-install-btn {
+        display: none !important;
+      }
+    }
+    .brand-icon-svg {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.25);
+    }
+    .arcade-lab-banner {
+      margin-top: 24px;
+      padding: 20px 22px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.86), rgba(19, 31, 58, 0.86));
+      border: 1px solid rgba(34, 211, 238, 0.32);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-card);
+    }
+    .arcade-lab-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .arcade-lab-info p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      max-width: 520px;
+    }
+    .arcade-quick-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .arcade-quick-btn {
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: rgba(7, 11, 20, 0.85);
+      color: #f8fafc;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .arcade-quick-btn:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(34, 211, 238, 0.2);
+    }
+    .pwa-help-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10060;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(3, 7, 18, 0.84);
+      backdrop-filter: blur(8px);
+      padding: 16px;
+    }
+    .pwa-help-modal.open {
+      display: flex;
+    }
+    .pwa-help-card {
+      width: 100%;
+      max-width: 410px;
+      background: #0c1322;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 18px;
+      padding: 22px;
+      color: var(--text-primary);
+      box-shadow: var(--shadow-elevated);
+    }
+    .pwa-help-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pwa-help-card p, .pwa-help-card li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .pwa-help-card ul {
+      margin: 10px 0 16px 18px;
+    }
+
   </style>
 </head>
 <body>
@@ -1575,7 +1709,14 @@
   <header class="site-header">
     <nav class="nav-container" aria-label="Primary Navigation">
       <a href="#top" class="brand-mark">
-        <span class="brand-dot"></span>
+        <svg class="brand-icon-svg" viewBox="0 0 512 512" width="28" height="28" aria-hidden="true">
+          <rect width="512" height="512" rx="116" fill="#0c1528"/>
+          <rect x="24" y="24" width="464" height="464" rx="96" fill="none" stroke="#22d3ee" stroke-width="18"/>
+          <polyline points="146,198 96,256 146,314" fill="none" stroke="#22d3ee" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 294 204 A 68 72 0 1 0 296 308 L 296 260 L 248 260" fill="none" stroke="#f8fafc" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="354" y1="188" x2="324" y2="324" stroke="#8b5cf6" stroke-width="26" stroke-linecap="round"/>
+          <polyline points="368,198 418,256 368,314" fill="none" stroke="#22d3ee" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <span>Glauco Guedes</span>
       </a>
 
@@ -1591,6 +1732,9 @@
       </ul>
 
       <div class="nav-actions">
+        <button type="button" class="pwa-install-btn" id="pwaInstallBtn" title="Instalar aplicativo">
+          <span>📲</span><span id="pwaInstallLabel">Instalar App</span>
+        </button>
         <button type="button" class="lang-toggle" id="langToggleBtn" aria-label="Alternar idioma">
           <span id="langLabel">EN</span>
         </button>
@@ -1859,6 +2003,19 @@
         <div class="game-panel active" id="game-net"></div>
         <div class="game-panel" id="game-sec"></div>
         <div class="game-panel" id="game-code"></div>
+      </div>
+
+      <div class="arcade-lab-banner reveal" id="arcadeLabBanner">
+        <div class="arcade-lab-info">
+          <h3><span>🕹️</span><span id="arcBannerTitle">Fliperama Retrô • 4 Joguinhos Leves Offline</span></h3>
+          <p id="arcBannerSub">Quer fazer uma pausa rápida? Jogue direto no navegador ou no app instalado sem precisar de internet.</p>
+        </div>
+        <div class="arcade-quick-grid">
+          <button type="button" class="arcade-quick-btn" onclick="window.openGlaucoArcade && window.openGlaucoArcade('invaders')">👾 Packet Invaders</button>
+          <button type="button" class="arcade-quick-btn" onclick="window.openGlaucoArcade && window.openGlaucoArcade('snake')">🐍 Cyber Snake</button>
+          <button type="button" class="arcade-quick-btn" onclick="window.openGlaucoArcade && window.openGlaucoArcade('breakout')">🧱 Firewall Breakout</button>
+          <button type="button" class="arcade-quick-btn" onclick="window.openGlaucoArcade && window.openGlaucoArcade('runner')">⚡ Cyber Runner</button>
+        </div>
       </div>
     </section>
 
@@ -3148,5 +3305,102 @@ print(len(web_nodes))`,
       applyLanguage();
     })();
   </script>
+
+  <!-- PWA Install Fallback Guide Modal -->
+  <div class="pwa-help-modal" id="pwaHelpModal" role="dialog" aria-modal="true">
+    <div class="pwa-help-card">
+      <h3>
+        <img src="./icon-192.png" alt="Ícone Glauco Guedes" width="32" height="32" style="border-radius:8px;" />
+        <span id="pwaHelpTitle">Instalar App — Glauco Guedes</span>
+      </h3>
+      <p id="pwaHelpIntro">Você pode instalar este portfólio na tela inicial do celular ou na área de trabalho do PC para abrir em tela cheia e jogar offline:</p>
+      <ul id="pwaHelpSteps">
+        <li><strong>Android / Chrome / Edge:</strong> Toque no menu (⋮) do navegador e selecione <em>"Instalar aplicativo"</em> ou <em>"Adicionar à tela inicial"</em>.</li>
+        <li><strong>iPhone / iPad (Safari):</strong> Toque no ícone de <em>Compartilhar</em> (quadrado com seta) e escolha <em>"Adicionar à Tela de Início"</em>.</li>
+      </ul>
+      <div style="display:flex;justify-content:flex-end;">
+        <button type="button" class="btn-primary" id="pwaHelpCloseBtn" style="padding:8px 18px;font-size:0.85rem;">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      /* Service Worker Registration (works on http:// and https://) */
+      if ("serviceWorker" in navigator && (location.protocol === "https:" || location.protocol === "http:")) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./sw.js").catch(function () {});
+        });
+      }
+
+      /* PWA Install Prompt Handler */
+      let deferredPrompt = null;
+      const installBtn = document.getElementById("pwaInstallBtn");
+      const helpModal = document.getElementById("pwaHelpModal");
+      const helpClose = document.getElementById("pwaHelpCloseBtn");
+
+      window.addEventListener("beforeinstallprompt", function (e) {
+        e.preventDefault();
+        deferredPrompt = e;
+      });
+
+      window.addEventListener("appinstalled", function () {
+        deferredPrompt = null;
+        if (installBtn) installBtn.style.display = "none";
+      });
+
+      if (installBtn) {
+        installBtn.addEventListener("click", async function () {
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            await deferredPrompt.userChoice;
+            deferredPrompt = null;
+          } else if (helpModal) {
+            helpModal.classList.add("open");
+          }
+        });
+      }
+
+      if (helpClose && helpModal) {
+        helpClose.addEventListener("click", function () {
+          helpModal.classList.remove("open");
+        });
+        helpModal.addEventListener("click", function (e) {
+          if (e.target === helpModal) helpModal.classList.remove("open");
+        });
+      }
+
+      /* Sync PWA & Arcade Banner labels with PT/EN toggle */
+      function syncPwaLang() {
+        const isEn = (document.documentElement.lang || "pt-BR").toLowerCase().startsWith("en");
+        const lbl = document.getElementById("pwaInstallLabel");
+        const bTitle = document.getElementById("arcBannerTitle");
+        const bSub = document.getElementById("arcBannerSub");
+        const hTitle = document.getElementById("pwaHelpTitle");
+        const hIntro = document.getElementById("pwaHelpIntro");
+        const hSteps = document.getElementById("pwaHelpSteps");
+        const hBtn = document.getElementById("pwaHelpCloseBtn");
+
+        if (lbl) lbl.textContent = isEn ? "Install App" : "Instalar App";
+        if (bTitle) bTitle.textContent = isEn ? "Retro Arcade • 4 Lightweight Offline Mini-Games" : "Fliperama Retrô • 4 Joguinhos Leves Offline";
+        if (bSub) bSub.textContent = isEn
+          ? "Take a quick break! Play right in your browser or installed app with full offline support."
+          : "Quer fazer uma pausa rápida? Jogue direto no navegador ou no app instalado sem precisar de internet.";
+        if (hTitle) hTitle.textContent = isEn ? "Install App — Glauco Guedes" : "Instalar App — Glauco Guedes";
+        if (hIntro) hIntro.textContent = isEn
+          ? "Install this portfolio on your phone's home screen or desktop for full-screen access and offline arcade games:"
+          : "Você pode instalar este portfólio na tela inicial do celular ou na área de trabalho do PC para abrir em tela cheia e jogar offline:";
+        if (hSteps) hSteps.innerHTML = isEn
+          ? '<li><strong>Android / Chrome / Edge:</strong> Open browser menu (⋮) and tap <em>"Install app"</em> or <em>"Add to Home screen"</em>.</li><li><strong>iPhone / iPad (Safari):</strong> Tap the <em>Share</em> icon and select <em>"Add to Home Screen"</em>.</li>'
+          : '<li><strong>Android / Chrome / Edge:</strong> Toque no menu (⋮) do navegador e selecione <em>"Instalar aplicativo"</em> ou <em>"Adicionar à tela inicial"</em>.</li><li><strong>iPhone / iPad (Safari):</strong> Toque no ícone de <em>Compartilhar</em> (quadrado com seta) e escolha <em>"Adicionar à Tela de Início"</em>.</li>';
+        if (hBtn) hBtn.textContent = isEn ? "Got it" : "Entendi";
+      }
+
+      const obs = new MutationObserver(syncPwaLang);
+      obs.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+      syncPwaLang();
+    })();
+  </script>
+  <script src="./arcade-game.js" defer></script>
 </body>
 </html>
